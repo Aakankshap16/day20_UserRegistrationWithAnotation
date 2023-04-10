@@ -11,7 +11,7 @@ namespace UserRegistrartionWithAnotation
     public class CheckValidaton
     {
         //FIRST NAME
-        // [Required(ErrorMessage = "Property check {0} is required")]
+         [Required(ErrorMessage = "Property check {0} is required")]
         // [StringLength(100,MinimumLength =3 ,ErrorMessage = "Name should be minimum 3 character" )]
         [RegularExpression("^[A-Z]{1}[A-Za-z]{2,}$", ErrorMessage = "Name should be minimum 3 character and start with caps")]
         [DataType(DataType.Text)]
@@ -20,6 +20,7 @@ namespace UserRegistrartionWithAnotation
 
 
         //LAST NAME
+        [Required(ErrorMessage = "Property check {0} is required")]
         [RegularExpression("^[A-Z]{1}[A-Za-z]{2,}$", ErrorMessage = "Name should be minimum 3 character and start with caps")]
         [DataType(DataType.Text)]
         public string LastName { get; set; }
@@ -38,7 +39,7 @@ namespace UserRegistrartionWithAnotation
         public string Phone { get; set; }
 
         //PASWORD
-        [RegularExpression("^(?=.*[A-Z])(?=.*[0-9]).{8,}$", ErrorMessage ="password minimum 8 character and atleast 1 upper case")]
+        [RegularExpression("^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+=?]).{8,}$", ErrorMessage ="password minimum 8 character and atleast 1 upper case")]
         [DataType(DataType.Password)]
         [PasswordPropertyText]
 
