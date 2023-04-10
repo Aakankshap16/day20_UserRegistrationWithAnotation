@@ -38,7 +38,7 @@ namespace UserRegistrartionWithAnotation
         public string Phone { get; set; }
 
         //PASWORD
-        [RegularExpression("^ .{8}$", ErrorMessage ="password minimum 8 character")]
+        [RegularExpression("^(?=.*[A-Z]).{8,}$", ErrorMessage ="password minimum 8 character and atleast 1 upper case")]
         [DataType(DataType.Password)]
         [PasswordPropertyText]
 
