@@ -20,6 +20,8 @@ namespace UserRegistrartionWithAnotation
             check.Email = Console.ReadLine();
             Console.WriteLine("Enter Your Phone Number");
             check.Phone = Console.ReadLine();
+            Console.WriteLine("Enter Your Password");
+            check.Password = Console.ReadLine();
 
 
 
@@ -37,7 +39,7 @@ namespace UserRegistrartionWithAnotation
             }
             else
             {
-                Console.WriteLine(" FirstName :" + check.FirstName + "\n LasttName :" + check.LastName + "\n email :" + check.Email + "\n PhoneNumber : " + check.Phone);
+                Console.WriteLine(" FirstName :" + check.FirstName + "\n LasttName :" + check.LastName + "\n email :" + check.Email + "\n PhoneNumber : " + check.Phone + "\n Password : " + check.Password);
             }
         }
     }
